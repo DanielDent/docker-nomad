@@ -10,3 +10,4 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -q \
     && chmod +x nomad \
     && DEBIAN_FRONTEND=noninteractive apt-get autoremove -y curl unzip \
     && rm -Rf /var/lib/apt /var/cache/apt
+CMD ["/nomad"]
