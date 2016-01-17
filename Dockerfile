@@ -10,4 +10,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -q \
     && chmod +x nomad \
     && DEBIAN_FRONTEND=noninteractive apt-get autoremove -y curl unzip \
     && rm -Rf /var/lib/apt /var/cache/apt
+EXPOSE 4646
+EXPOSE 4647
+EXPOSE 4648
+EXPOSE 4648/UDP
+VOLUME "/workdir"
+WORKDIR "/workdir"
 ENTRYPOINT ["/nomad"]
