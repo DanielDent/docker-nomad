@@ -14,7 +14,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update -q \
     && rm gpg \
     && echo "deb http://apt.dockerproject.org/repo debian-jessie main" > /etc/apt/sources.list.d/docker.list \
     && DEBIAN_FRONTEND=noninteractive apt-get update -q \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y docker-engine=1.9.1~jessie \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y docker-engine=1.9.1-0~jessie \
     && DEBIAN_FRONTEND=noninteractive apt-get autoremove -y curl unzip \
     && rm -Rf /var/lib/apt /var/cache/apt
 EXPOSE 4646
